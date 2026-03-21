@@ -18,7 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText edUsename, edPassword;
+    EditText edUsername, edPassword;
     Button btn;
     TextView tv;
 
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        edUsename = findViewById(R.id.editTextLoginUsername);
+        edUsername = findViewById(R.id.editTextLoginUsername);
         edPassword = findViewById(R.id.editTextLoginPassword);
         btn = findViewById(R.id.buttonLogin);
         tv = findViewById(R.id.textViewNewUser);
@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username = edUsename.getText().toString();
+                String username = edUsername.getText().toString();
                 String password = edPassword.getText().toString();
                 Database db = new Database(getApplicationContext(), "healthcare", null, 1);
                 if (username.length()==0 || password.length()==0) {
