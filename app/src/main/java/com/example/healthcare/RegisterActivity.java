@@ -25,8 +25,8 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         edUsername = findViewById(R.id.editTextRegUsername);
-        edEmail = findViewById(R.id.editTextRegEmail);
         edPassword = findViewById(R.id.editTextRegPassword);
+        edEmail = findViewById(R.id.editTextRegEmail);
         edConfirmPassword = findViewById(R.id.editTextRegConfirmPassword);
         btn = findViewById(R.id.buttonRegister);
         tv = findViewById(R.id.textViewExistingUser);
@@ -55,13 +55,11 @@ public class RegisterActivity extends AppCompatActivity {
                             db.register(username, email, password);
                             Toast.makeText(getApplicationContext(), "Registration Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                        }
-
-                        else {
+                        } else {
                             Toast.makeText(getApplicationContext(), "Password must contain at least 8 character, having letter, digit and special character", Toast.LENGTH_SHORT).show();
                         }
 
-                    }else {
+                    } else {
                         Toast.makeText(getApplicationContext(), "Password and Confirm Password didn't not match", Toast.LENGTH_SHORT).show();
                     }
 
@@ -95,9 +93,8 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if (f1 == 1 && f2 == 1 && f3 == 1)
                     return true;
-                else {
                     return false;
-                }
+
             }
       }
 

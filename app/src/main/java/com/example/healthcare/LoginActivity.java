@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (username.length()==0 || password.length()==0) {
                     Toast.makeText(getApplicationContext(), "Please enter all the fields", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (db.login(username, password) == 1){
+                    if(db.login(username, password) == 1){
                         Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
