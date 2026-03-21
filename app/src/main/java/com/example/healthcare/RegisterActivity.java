@@ -1,6 +1,5 @@
 package com.example.healthcare;
 
-import static android.opengl.ETC1.isValid;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,7 +37,6 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
