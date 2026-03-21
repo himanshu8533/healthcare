@@ -12,9 +12,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -41,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                 String password = edPassword.getText().toString();
                 Database db = new Database(getApplicationContext(), "healthcare", null, 1);
                 if (username.length()==0 || password.length()==0) {
-                    Toast.makeText(getApplicationContext(), "Please enter all the fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Please enter all the fields", Toast.LENGTH_SHORT).show();
                 } else {
                     if(db.login(username, password) == 1){
                         Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
