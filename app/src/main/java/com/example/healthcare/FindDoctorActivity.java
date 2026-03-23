@@ -32,29 +32,29 @@ public class FindDoctorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(FindDoctorActivity.this, DoctorDetailsActivity.class);
-                it.putExtra("doctorName", "Family Physician");
+                it.putExtra("title", "Family Physician");
                 startActivity(it);
 
             }
         });
 
         CardView dietician = findViewById(R.id.cardFDDietician);
-        familyPhysician.setOnClickListener(new View.OnClickListener() {
+        dietician.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(FindDoctorActivity.this, DoctorDetailsActivity.class);
-                it.putExtra("doctorName", "Dietician");
+                it.putExtra("title", "Dietician");
                 startActivity(it);
 
             }
         });
 
         CardView dentist = findViewById(R.id.cardFDDentist);
-        familyPhysician.setOnClickListener(new View.OnClickListener() {
+        dentist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(FindDoctorActivity.this, DoctorDetailsActivity.class);
-                it.putExtra("doctorName", "Dentist");
+                it.putExtra("title", "Dentist");
                 startActivity(it);
 
             }
@@ -62,21 +62,21 @@ public class FindDoctorActivity extends AppCompatActivity {
         });
 
         CardView surgeon = findViewById(R.id.cardFDSurgeon);
-        familyPhysician.setOnClickListener(new View.OnClickListener() {
+        surgeon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(FindDoctorActivity.this, DoctorDetailsActivity.class);
-                it.putExtra("doctorName", "Surgeon");
+                it.putExtra("title", "Surgeon");
                 startActivity(it);
             }
         });
 
         CardView cardiologists = findViewById(R.id.cardFDCardiologists);
-        familyPhysician.setOnClickListener(new View.OnClickListener() {
+        cardiologists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(FindDoctorActivity.this, DoctorDetailsActivity.class);
-                it.putExtra("doctorName", "Cardiologists");
+                it.putExtra("title", "Cardiologists");
                 startActivity(it);
             }
         });
