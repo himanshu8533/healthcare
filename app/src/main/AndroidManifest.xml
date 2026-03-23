@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Healthcare">
         <activity
+            android:name=".BookAppointmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".DoctorDetailsActivity"
             android:exported="false" />
         <activity
