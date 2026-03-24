@@ -12,11 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Calendar;
 
@@ -26,7 +22,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
     TextView tv;
     private DatePickerDialog datePickerDialog;
     private TimePickerDialog timePickerDialog;
-    private Button dateButton,timeButton;
+    private Button dateButton,timeButton, btnBook,btnBack;
 
 
     @Override
@@ -39,8 +35,10 @@ public class BookAppointmentActivity extends AppCompatActivity {
         ed2 = findViewById(R.id.editTextAppAddress);
         ed3 = findViewById(R.id.editTextAppContactNumber);
         ed4 = findViewById(R.id.editTextAppFees);
-        dateButton = findViewById(R.id.buttonAppDate);
+        dateButton = findViewById(R.id.buttonCartDate);
         timeButton = findViewById(R.id.buttonAppTime);
+        btnBook= findViewById(R.id.buttonBookAppointment);
+        btnBack = findViewById(R.id.buttonAppBack);
 
 
         ed1.setKeyListener(null);
@@ -76,6 +74,20 @@ public class BookAppointmentActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 timePickerDialog.show();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BookAppointmentActivity.this, FindDoctorActivity.class));
+            }
+        });
+
+        btnBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
